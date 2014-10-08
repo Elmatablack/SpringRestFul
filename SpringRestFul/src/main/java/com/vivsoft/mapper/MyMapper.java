@@ -24,5 +24,6 @@ public interface MyMapper {
 	
 	@Select("{ call SAB.mypackage.my_procedure(#{my_cursor, jdbcType=CURSOR,mode=OUT,javaType=java.sql.ResultSet,resultMap=employeeMap}) }")
 	@Options(statementType = StatementType.CALLABLE)
+	//noda aqui
 	public Object getEmployees(Map<String,Object> params);
 }
